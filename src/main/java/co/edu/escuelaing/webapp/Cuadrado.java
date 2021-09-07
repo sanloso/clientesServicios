@@ -1,7 +1,9 @@
 package co.edu.escuelaing.webapp;
 
+import co.edu.escuelaing.springplus.Component;
 import co.edu.escuelaing.springplus.Service;
 
+@Component
 public class Cuadrado {
 
     @Service

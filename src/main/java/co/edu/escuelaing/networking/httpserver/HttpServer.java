@@ -2,7 +2,6 @@ package co.edu.escuelaing.networking.httpserver;
 
 import co.edu.escuelaing.springplus.Service;
 
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,6 +32,7 @@ public class HttpServer {
             System.err.println("Could not listen on port: 35000.");
             System.exit(1);
         }
+//        searchForComponents();
         boolean running = true;
         while (running) {
             Socket clientSocket = null;
@@ -97,6 +97,19 @@ public class HttpServer {
         }
         return response;
     }
+
+//    private void searchForComponents(){
+//
+//    }
+//
+//    private void loadServices (Class c) {
+//        for (Method m : c.getDeclaredMethods()){
+//            if (m.isAnnotationPresent(Service.class)){
+//                String uri = m.getAnnotation(Service.class).uri();
+//                services.put(uri, m);
+//            }
+//        }
+//    }
 
     public String getHTMLResourse(URI resourceURI){
         Path file = Paths.get("public_html" + resourceURI.getPath());
